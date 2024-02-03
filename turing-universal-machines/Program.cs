@@ -9,9 +9,9 @@ namespace turing_universal_machines
         static void Main(string[] args)
         {
 
-            var myMachine = new UniversalMachine("b", 200);
+            var myMachine = new UniversalMachine("b", 500);
 
-            myMachine.Run(MachineConfigs.C1011, 1000);
+            myMachine.Run(MachineConfigs.C010, 600);
 
         }
     }

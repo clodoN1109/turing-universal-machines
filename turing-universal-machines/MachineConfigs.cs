@@ -9,7 +9,7 @@ namespace turing_universal_machines
     internal class MachineConfigs
     {
 
-        internal static dynamic C1011 =
+        internal static dynamic C001 =
 
                 new Dictionary<string, Dictionary<string, Dictionary<string, object>>> {
 
@@ -125,7 +125,7 @@ namespace turing_universal_machines
                 };
 
 
-        internal static Dictionary<string, Dictionary<string, Dictionary<string, object>>> C10 =
+        internal static Dictionary<string, Dictionary<string, Dictionary<string, object>>> C010 =
 
         new Dictionary<string, Dictionary<string, Dictionary<string, object>>> {
 
