@@ -35,7 +35,7 @@
 
   - MachineConfig.cs : Defines the possible configurations to be fed to a created machine (for now, only C10 and C1011, examples Turing uses in his essay).
 
-    Note: A set of configurations is analogous to the concept of a program.
+    Note: A set of configurations is just the analog of a program and its sequence of instructions.
     
   - Program.cs : Creates an instance of the machine and runs it using a selected configuration.
     
