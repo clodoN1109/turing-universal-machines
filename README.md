@@ -34,7 +34,8 @@
   - UniversalMachine.cs : Defines the machine, its components ( tape and scanner ) and its behavior ( Run and PassInstruction methods ).
 
   - MachineConfig.cs : Defines the possible configurations to be fed to a created machine (for now, only C10 and C1011, examples Turing uses in his essay).
-    Note: A set of configurations is analogous to the concept of algorithm.
+
+    Note: A set of configurations is analogous to the concept of a program.
     
   - Program.cs : Creates an instance of the machine and runs it using a selected configuration.
     
