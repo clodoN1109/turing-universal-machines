@@ -21,7 +21,7 @@
 ### The Project
 
   This programming essay is based on Alan Turing's 1936 essay "On Computable Numbers, with an Application to the Entscheidungsproblem" and consistis in a simulation of his
-  conceptual universal machine. Simulating the machine might help experimenting feeding the machine with varied and complex set of configurations.
+  conceptual universal machine. Simulating the machine might help experimenting feeding the machine with varied and complex sets of configurations.
 
   Link to the essay: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
   
