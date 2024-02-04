@@ -65,8 +65,8 @@ The example ahead uses delay of 1000 miliseconds and the C001 configuration set,
 #
 ### Requirements
 
-- Windows/Linux/macOS
-- Microsoft Visual Studio
+- Windows/Linux
+- <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0"> NET 6.0 </div> 
   
 #
 ### Roadmap
