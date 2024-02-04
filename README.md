@@ -65,7 +65,7 @@ The example ahead uses delay of 1000 miliseconds and the C001 configuration set,
 #
 ### Requirements
 
-- Windows/Linux/macOS
+- Windows/Linux
 - Microsoft Visual Studio
   
 #
