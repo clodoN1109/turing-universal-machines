@@ -70,7 +70,15 @@ namespace turing_universal_machines
             Console.SetCursorPosition(arrowPosition, Console.CursorTop + 1);
             Console.Write("\r" + new string(' ', arrowPosition - 4) + "SCANNER (" + instruction + ")" + new string(' ', Console.BufferWidth - Console.CursorLeft - 10));
 
+#if WINDOWS
+
             Console.SetCursorPosition(arrowPosition, Console.CursorTop - 2);
+
+#else 
+
+            Console.SetCursorPosition(arrowPosition, Console.CursorTop - 3);
+
+#endif
 
         }
 
