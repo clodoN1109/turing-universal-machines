@@ -30,7 +30,7 @@
 
   The code, written in C#, is organized into three files:
 
-  - UniversalMachine.cs : Defines the machine, its components ( tape and scanner ) and its behavior ( Run and PassInstruction methods ).
+  - UniversalMachine.cs : Defines the machine, its components ( tape and scanner ) and its behavior ( Run and GetInstruction methods ).
 
   - MachineConfig.cs : Defines the possible configurations to be fed to a created machine (for now, only C10 and C1011, examples Turing uses in his essay).
 
