@@ -86,7 +86,7 @@ namespace turing_universal_machines
 
             Console.CursorVisible = false;
 
-            Console.WriteLine("\n\n\n\n\n\n\n\n");
+            Console.WriteLine("\n");
             Console.WriteLine("L = Move left once");
             Console.WriteLine("R = Move right once");
             Console.WriteLine("P0 = Print 0");
@@ -100,6 +100,9 @@ namespace turing_universal_machines
             Console.WriteLine();
 
             PrintMachineState();
+//#if WINDOWS
+//            Console.Beep(400, 2000);
+//#endif
             Thread.Sleep(2000); 
 
         }
@@ -144,7 +147,7 @@ namespace turing_universal_machines
 
             internal Tape MountedTape { get; set; }
 
-            internal void PlayBip(string instruction)
+            internal void PlayBeep(string instruction)
             {
 #if WINDOWS
                 switch (instruction)
@@ -178,7 +181,7 @@ namespace turing_universal_machines
                 }
 
                 Thread.Sleep(Delay);
-                PlayBip(instruction);
+                //PlayBeep(instruction);
                 switch (instruction)
                 {
                     case "R":
@@ -215,6 +218,8 @@ namespace turing_universal_machines
 
         internal void Run(Dictionary<string, Dictionary<string, Dictionary<string, object>>> mconfigs)
         {
+
+            Console.Clear();
 
             PrintMachineDefinition();
 

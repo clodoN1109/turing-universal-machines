@@ -1,11 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>turing_universal_machines</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<Choose>
+		<When Condition="'$(OS)' == 'Windows_NT'">
+			<PropertyGroup>
+				<OutputType>Exe</OutputType>
+				<TargetFramework>net6.0-windows</TargetFramework>
+				<RootNamespace>turing_universal_machines</RootNamespace>
+				<ImplicitUsings>enable</ImplicitUsings>
+				<Nullable>enable</Nullable>
+			</PropertyGroup>
+		</When>
+
+		<When Condition="'$(OS)' != 'Windows_NT'">
+			<PropertyGroup>
+				<OutputType>Exe</OutputType>
+				<TargetFramework>net6.0</TargetFramework>
+				<RootNamespace>turing_universal_machines</RootNamespace>
+				<ImplicitUsings>enable</ImplicitUsings>
+				<Nullable>enable</Nullable>
+			</PropertyGroup>
+		</When>
+
+	</Choose>
+
 
 </Project>

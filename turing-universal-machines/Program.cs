@@ -9,7 +9,7 @@ namespace turing_universal_machines
         static void Main(string[] args)
         {
 
-            var myMachine = new UniversalMachine(1000);
+            var myMachine = new UniversalMachine(1);
 
             myMachine.Run(MachineConfigs.C001);
 
