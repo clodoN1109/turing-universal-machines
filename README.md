@@ -2,19 +2,18 @@
   
 # Turing Universal Machines
 
-## Implementation of the conception of Alan Turing from a universal computing machine
+## Implementation of Alan Turing's conception of a universal computing machine
 
 </div>
 
-
-  
 <div align="center">
-  <img src="https://github.com/clodoN1109/turing-universal-machines/assets/104923248/bd707c6b-20c2-4326-a209-0f7fff7cbcf6" width="100%">
+  <img src="https://github.com/clodoN1109/turing-universal-machines/assets/104923248/6b58f7a5-d8ed-4f4f-9e04-21abbde5028c" width="100%">
 </div>
 
 ### Index
 - The Project
 - Source Code
+- Running
 - Requirements
 - Roadmap
 
@@ -38,7 +37,31 @@
     Note: A set of configurations is just the analog of a program and its sequence of instructions.
     
   - Program.cs : Creates an instance of the machine and runs it using a selected configuration.
-    
+
+#
+### Running
+
+- Open the Program.cs file and configure the instantiation of the machine, setting up its delay parameter (in miliseconds). A delay around 200 miliseconds (default)
+permits following the scanner in action step by step.
+
+- Set the configuration set parameter for the Run method, using one of the members of the MachineConfigs class.
+
+The example ahead uses delay of 1000 miliseconds and the C001 configuration set, which is intended to compute the infinite sequence 001011011101111... .
+
+<div align="left">
+  <img src="https://github.com/clodoN1109/turing-universal-machines/assets/104923248/fe2a526d-f08f-44d7-b48f-eaf8d3d0c9b8" width="70%">
+</div>
+
+
+- Run the program and observe in the terminal a representation of each state of the machine during the computations. 
+
+
+<div align="center">
+  
+  <img src="https://github.com/clodoN1109/turing-universal-machines/assets/104923248/cfc247f4-0f44-4adb-88f8-3cd9ab37efe4" width="100%">
+  
+</div>
+
 #
 ### Requirements
 
