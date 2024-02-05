@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace turing_universal_machines
 {
+    /// <summary>
+    /// Reunites sets of configurations that can be fed to an instance of the UniversalMachine class.
+    /// </summary>
     internal class MachineConfigs
     {
-
+        /// <summary>
+        /// Configuration to generate the sequence 001011011101111011111... .
+        /// </summary>
         internal static dynamic C001 =
 
                 new Dictionary<string, Dictionary<string, Dictionary<string, object>>> {
@@ -124,7 +129,9 @@ namespace turing_universal_machines
 
                 };
 
-
+        /// <summary>
+        /// Configuration to generate the sequence 0101010101010101... .
+        /// </summary>
         internal static Dictionary<string, Dictionary<string, Dictionary<string, object>>> C010 =
 
         new Dictionary<string, Dictionary<string, Dictionary<string, object>>> {
