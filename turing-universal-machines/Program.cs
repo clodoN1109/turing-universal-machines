@@ -20,7 +20,8 @@ namespace turing_universal_machines
             {
                 case 0:
                     Console.WriteLine("Enter a value for the machine's delay: ");
-                    delay = int.Parse(Console.ReadLine());
+                    string? delayInput = Console.ReadLine();
+                    delay = delayInput==null ? 50 : int.Parse(delayInput);
                     break;
                 default:
                     delay = int.Parse(args[0]);

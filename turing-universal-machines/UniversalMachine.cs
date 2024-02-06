@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
-using static turing_universal_machines.UniversalMachine;
+
 
 namespace turing_universal_machines
 {
@@ -55,15 +55,13 @@ namespace turing_universal_machines
         /// </summary>
         internal void PrintResult()
         {
-            string result = "";
-
-            foreach (var item in tape.array)
+            var result = new StringBuilder();
+            foreach (string symbol in tape.array)
             {
-                if (item == "0" || item == "1")
-                    result += item.ToString();
+                if (symbol == "0" || symbol == "1") result.Append(symbol);
             }
 
-            Console.WriteLine("\n\n\n RESULT: " + result + "\n\n");
+            Console.WriteLine($"\n\n\n RESULT: { result } \n\n");
             Thread.Sleep(2000);
         }
         /// <summary>
@@ -72,26 +70,21 @@ namespace turing_universal_machines
         /// <param name="instruction"></param>
         internal void PrintMachineState(string instruction = "") {
 
-            string parameters = "OPERATIONS: " + numberOfOperations.ToString("D6") + "  MCONFIG: " + mconfig.ToString() + "  TAPE:   ".ToString();
+            string parameters = $"OPERATIONS: {numberOfOperations:D6} MCONFIG: {mconfig} TAPE: ";
 
-            string tapeState = "";
-            foreach (var item in tape.array)
+            var tapeState = new StringBuilder();
+            foreach (string symbol in tape.array)
             {
-                if (item != "")
-                    tapeState += item.ToString();
+                if (symbol != "") tapeState.Append(symbol);
             }
 
-            Console.Write("\r" + new string(' ', 50));
-
-            Console.Write("\r" + parameters + tapeState);
-
+            Console.Write($"\r{new string(' ', 50)}");
+            Console.Write($"\r{parameters}{tapeState}");
             int arrowPosition = parameters.Length + scanner.ScannedPosition;
-
             Console.SetCursorPosition(arrowPosition, Console.CursorTop + 1);
-            Console.Write("\r" + new string(' ', arrowPosition) + "^" + new string(' ', Console.BufferWidth - Console.CursorLeft - 1));
-
+            Console.Write($"\r{new string(' ', arrowPosition)}^{new string(' ', Console.BufferWidth - Console.CursorLeft - 1)}");
             Console.SetCursorPosition(arrowPosition, Console.CursorTop + 1);
-            Console.Write("\r" + new string(' ', arrowPosition - 4) + "SCANNER (" + instruction + ")" + new string(' ', Console.BufferWidth - Console.CursorLeft - 10));
+            Console.Write($"\r{new string(' ', arrowPosition - 4)}SCANNER ({instruction}){new string(' ', Console.BufferWidth - Console.CursorLeft - 10)}");
 
 #if WINDOWS
 
@@ -286,7 +279,7 @@ namespace turing_universal_machines
             while (scanner.ScannedPosition < tape.array.Length)
             {
 
-                foreach (var instruction in GetInstruction(mconfigs, scanner.ScannedSymbol))
+                foreach (string instruction in GetInstruction(mconfigs, scanner.ScannedSymbol))
                 {
 
                     PrintMachineState(instruction);

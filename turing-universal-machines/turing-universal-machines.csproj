@@ -23,5 +23,13 @@
 
 	</Choose>
 
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\Users\clovi\source\repos\turing-universal-machines\turing-universal-machines\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\Users\clovi\source\repos\turing-universal-machines\turing-universal-machines\.editorconfig" />
+	</ItemGroup>
+
 
 </Project>
